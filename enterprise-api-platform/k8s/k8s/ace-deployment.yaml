@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ace-backend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: ace-backend
+  template:
+    metadata:
+      labels:
+        app: ace-backend
+    spec:
+      containers:
+      - name: ace-backend
+        image: ace-backend:latest
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8080
+

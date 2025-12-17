@@ -1,0 +1,8 @@
+- name: Deploy Docker Container
+  hosts: localhost
+  connection: local
+  gather_facts: no
+
+  tasks:
+     - name: Stop existing container if existing"
+       shell

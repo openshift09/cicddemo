@@ -1,0 +1,10 @@
+- name: Simple Ansible Test
+  hosts: localhost
+  connections: localhost
+  gather_facts: no
+
+  tasks:
+    -  name: Print message from Ansible
+       debug:
+       message: "Hello from Ansible triggered by Jenkins"
+       
